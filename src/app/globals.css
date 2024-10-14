@@ -25,21 +25,32 @@ a {
   text-decoration: none;
 }
 
-.Bottom{
+.Bottom {
   background-color: #181920;
   padding: 10px 15px;
   border-radius: 10px;
   cursor: pointer;
-
 }
-.input:focus{
+.input:focus {
   border: none;
   outline: none;
 }
 
-.wavy-background {
-  width: 100%;
-  height: 400px;
-  background: linear-gradient(to right, #6362ed 0%, #6362ed77 50%, #ffffff 100%);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+.wavyBackground {
+  --main-color: #6262ed;
+  --blur-amount: 8px; /* Increased blur for a smoother effect */
+  
+  width: 350px; /* Slightly increased size for better visual impact */
+  height: 350px;
+  background: var(--main-color);
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  z-index: 0;
+  
+  border-radius: 50%; /* Perfect circle */
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
+  
+  box-shadow: 0px 0px 60px 15px rgba(98, 98, 237, 0.6); /* Softer, larger shadow */
 }

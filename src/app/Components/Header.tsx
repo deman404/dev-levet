@@ -25,6 +25,7 @@ function Header() {
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
+          zIndex:3,
         }}
       >
         <Image src={Logo} width={180} alt="Picture of the author" />
