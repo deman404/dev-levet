@@ -36,3 +36,10 @@ a {
   border: none;
   outline: none;
 }
+
+.wavy-background {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to right, #6362ed 0%, #6362ed77 50%, #ffffff 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
