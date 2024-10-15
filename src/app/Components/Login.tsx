@@ -1,8 +1,16 @@
 "use client";
+
 import { IoClose } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { TbBrandGithubFilled } from "react-icons/tb";
+import { getAuth, signInWithPopup, GithubAuthProvider } from "firebase/auth";
+
+
+
+
+
+
 interface LoginProps {
   onClose: () => void;
 }
@@ -14,15 +22,18 @@ function Login({ onClose }: LoginProps) {
         width: "100vw",
         height: "100vh",
         background: "#0000007e",
-        zIndex: 10,
+        zIndex: 5,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        transition:"display 1s easy-in-out",
+        position:"absolute"
+
       }}
     >
       <div
         style={{
-          height: "60%",
+          height: "80%",
           width: "50%",
           background: "#ffffff",
           borderRadius: 10,
@@ -130,11 +141,12 @@ function Login({ onClose }: LoginProps) {
           <div
             style={{
               marginTop: 10,
-              height: 60,
               width: "60%",
               display: "flex",
-              justifyContent: "space-around",
-              justifyItems: "center",
+              flexDirection:"column",
+              alignItems: "center",
+              justifyContent:"center",
+
             }}
           >
             <FcGoogle
@@ -144,18 +156,12 @@ function Login({ onClose }: LoginProps) {
                 padding: 8,
                 borderRadius: 5,
                 cursor: "pointer",
+                width:"80%",
+                margin:4,
+  
               }}
             />
-            <FaSquareFacebook
-              size={40}
-              style={{
-                background: "#ededed",
-                padding: 8,
-                borderRadius: 5,
-                color: "blue",
-                cursor: "pointer",
-              }}
-            />
+          
             <TbBrandGithubFilled
               size={40}
               style={{
@@ -164,6 +170,8 @@ function Login({ onClose }: LoginProps) {
                 borderRadius: 5,
                 color: "#181920",
                 cursor: "pointer",
+                width:"80%",
+                margin:4,
               }}
             />
           </div>
