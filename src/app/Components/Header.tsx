@@ -15,17 +15,17 @@ function Header() {
   return (
     <>
       <div
+      className="bgTransparent"
         style={{
-          width: "60%",
-          height: 60,
-          background: "#ffffff",
-          marginTop: 10,
-          borderRadius: 10,
+          width: "100vw",
+          height: 80,
           position: "fixed",
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
-          zIndex:3,
+          zIndex: 3,
+          borderBottomColor: "#ededed",
+          borderBottomWidth: 5,
         }}
       >
         <Image src={Logo} width={180} alt="Picture of the author" />

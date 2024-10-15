@@ -7,11 +7,11 @@ body {
 }
 
 body {
-  color: #ffffff;
-  background: #181920;
+  color: #181920;
   font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: aliceblue;
 }
 
 * {
@@ -36,21 +36,32 @@ a {
   outline: none;
 }
 
-.wavyBackground {
-  --main-color: #6262ed;
-  --blur-amount: 8px; /* Increased blur for a smoother effect */
-  
-  width: 350px; /* Slightly increased size for better visual impact */
-  height: 350px;
-  background: var(--main-color);
+.bgTransparent {
+  background: rgba( 255, 255, 255, 0.25 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+}
+
+.bg1 {
+  width: 50%;
+  height: 100%;
   position: absolute;
-  top: 10%;
+  top: 0;
   left: 5%;
   z-index: 0;
-  
-  border-radius: 50%; /* Perfect circle */
-  backdrop-filter: blur(var(--blur-amount));
-  -webkit-backdrop-filter: blur(var(--blur-amount));
-  
-  box-shadow: 0px 0px 60px 15px rgba(98, 98, 237, 0.6); /* Softer, larger shadow */
+  opacity: 0.8;
+}
+.bg2 {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  z-index: 0;
+  opacity: 0.8;
+}
+.cube1{
+  position: absolute;
+  top: 15%;
+  right: 0%;
 }
